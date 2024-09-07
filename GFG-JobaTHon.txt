@@ -1,0 +1,116 @@
+Magic and toy shop
+Accuracy: 100.0%Submissions: 3+Points: 25
+Geek goes to a toy shop having N toys, the prices of these toys are given as price array. He wants to buy all the N toys, but he has only M rupees to spend. He has a magical Trident which reduces the price of each toy. This reduced price for each toy is given in magical_price array. That is for ith toy (1<=i<=N) price[i] is the original price and magical_price[i] is the price after applying magic. Since applying magic reduces the power of Trident, he wants to apply it as minimum times as possible.
+
+Find the minimum number of toys on which he should apply this magic so as to buy all the N toys for atmost M rupees. If it is not possible for Geek to buy the toys even after applying the magic on all the toys the return -1.
+
+Example 1:
+
+Input:
+N = 5, M = 13 
+price = {3,4,6,2,4}
+magical_price = {1,2,5,1,3}
+Output:
+4
+Explanation:
+Geek can apply the magic on first four toys so as to buy all the toys for 13. He will require minimum 4 magical operations.
+Example 2:
+
+Input:
+N = 3, M = 6 
+price = {4,3,4}
+magical_price = {2,2,3}
+Output:
+-1
+Explanation:
+Even after applying the maigc on all the toys, he cannot buy all the toys at rupees 6.
+Your task:
+You don't need to read input or print anything. Your task is to complete the function minimumMagic() which takes four arguments N, M, price, and magical_price. It returns an integer that is minimum magical operations required or -1, if not possible.
+
+Constraints:
+1 <= N <= 105
+1 <= M <= 109
+1 <= magical_price[i] <= price[i] <= 104
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+Count beautiful strings
+
+Accuracy: 13.31%Submissions: 45K+Points: 35
+Geek love strings having atmost one character whose frequency is odd and rest all (if exists) characters have even frequencies, he calls such strings as beautiful strings. Geek has a box containing n strings. You have to help him in counting number of pairs (i,j) (0<i<j<n-1) such that a string formed by concatenating string at index i with string at index j is a beautiful string. 
+
+Note: Strings consist of only lowercase English letters.
+
+Example 1:
+
+Input:
+n = 3
+box = {bbcb, abccc, abc}
+Output:
+3
+Explanation:
+Pairs which form beautiful string are (1,2), (1,3) and (2,3).
+
+Concatenating 'bbcb' and 'abccc' we get 'bbcbabccc' in which characters 'b' and 'c' has frequecy of 4, and only 'a' has odd frequency. So the pair (1,2) forms a beautiful string.
+
+Concatenating 'bbcb' and 'abc' we get 'bbcbabc' in which characters 'b' and 'c' has frequecy of 4 and 2 respectively, and only 'a' has odd frequency. So the pair (1,3) forms a beautiful string.
+
+Concatenating 'abccc' and 'abc' we get 'abcccabc' in which all the characters have even frequency. So the pair (2,3) also forms a beautiful string.
+Example 2:
+
+Input:
+n = 7
+box = {aaaa, abba, ccc, caa, cbba, acaac, bcb}
+Output:
+16
+Explanation:
+There are total 16 pairs which form beautiful strings. Pairs which do not form beautiful string are (1,5), (2,5), (3,6), (4,6) and (6,7).
+Your task:
+You don't need to read input or print anything. Your task is to complete the function noOfPairs() which take array of strings as an argument, and returns the number pairs which form beautiful strings.
+
+Constraints:
+2 <= n <=105
+Strings consist of lowercase English letters.
+Sum of length of all the strings in a box does not exceed 106.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Maximum good length
+Accuracy: 50.02%Submissions: 24K+Points: 40
+You are given a matrix A of size N*M. Any length 'L' can be called good length if there is at least one square matrix of size L*L in A such that all elements in that square matrix are greater than or equal to L. You need to output the maximum good length for given matrix.
+
+Example 1:
+
+Input:
+N = 5, M = 4
+A = [[4 4 6 3],
+     [4 4 4 6],
+     [3 5 5 5],
+     [1 2 6 4],
+     [4 3 2 1]]
+Output:
+3
+Explanation:
+There are two 3*3 matrices in which all the elements are greater than or equal to 3. 
+For example :- [[4 4 6], and [[4 6 3],
+                 [4 4 4],      [4 4 6],
+                [3 5 5]]      [5 5 5]].
+You cannot find maximum good length greater than 3.
+Example 2:
+
+Input:
+N = 2, M = 3
+A = [[1 1 1],
+     [1 1 1]]
+Output:
+1
+Explanation:
+There are six 1*1 matrices in which all the elements are greater than or equal to 1. 
+You cannot find maximum good length greater than 1.
+Your task:
+You don't need to read input or print anything. Your task is to complete the function maxGoodLength() which take two matrix A as an argument, and returns the maximum good length for that matrix.
+
+Constraints:
+1 <= N,M <=103
+1 <= A[i][j] <= 106
